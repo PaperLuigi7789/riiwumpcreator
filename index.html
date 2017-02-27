@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <meta name="description" content="Dope.">
+    <meta name="author" content="Wumptendo Channel">
+    <meta property="og:title" name="Title" content="Wumptendo Channel"/>
+    <meta property="og:description" name="Description"
+          content="Dope."/>
+    <meta property="og:image" name="Image" content="https://imgur.com/0TTGHo7.png"/>
+    <meta property="og:url" name="URL" content="https://clubwumpus.github.io/wumptendo/"/>
+	<title>Wumptendo Channel</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<script>
+var hover = polyAudio("snd/hover.mp3", 10);
+var select = new Audio("snd/select.mp3");
+var select2 = new Audio("snd/select2.mp3");
+
+function polyAudio(path, copies) {
+  var elems = [], index = 0
+  for (var i = 0; i < 16; i++) elems.push(new Audio(path))
+  return {
+    play: function() {
+      if (window.chrome) elems[index].load()
+      elems[index].play()
+      index = (index + 1) % copies
+    }
+  }
+}
+
+function videoPlay(url) {
+select.play();
+		$( ".button" ).toggle();
+		$( "#video-list-container" ).toggle();
+		$( "#iframe" ).toggle();
+		document.getElementById("iframe").src = "https://www.youtube.com/embed/" + url + "?autoplay=1&rel=0&showinfo=0&controls=0&origin=https://github.com'";
+		var audioElm = document.getElementById('bgm');
+		audioElm.muted = !audioElm.muted;
+};
+
+function videoStop() {
+select2.play();
+		$( "#video-list-header" ).text("Wumptendo Channel");
+		$( ".button" ).toggle();
+		$( "#video-list-container" ).toggle();
+		$( "#iframe" ).toggle();
+		document.getElementById("iframe").src = "";
+		var audioElm = document.getElementById('bgm');
+		audioElm.muted = !audioElm.muted;
+};
+
+function exit() {
+	select2.play();
+    window.location.href = 'https://clubwumpus.github.io/wumpmenu/';
+};
+
+function audioFade() {
+    var backgroundAudio=document.getElementById("bgm");
+	backgroundAudio.volume = 0;
+	$(backgroundAudio).animate({volume: 0.4}, 2000);
+	backgroundAudio.setAttribute("oncanplay", "#");
+}
+</script>
+<body onload="document.getElementById('iframe').src = '';">
+<div id="bg"></div>
+<div id="menu" class="menu">
+	<a href="#" class="button exit" onclick="exit();" onmouseover="hover.play();"> </a>
+		<div id="video-list">
+			<div id="video-list-header">Wumptendo Channel</div>
+				<iframe id="iframe" src="" frameborder="0" allowfullscreen autoplay="1"></iframe>
+						<a href="#" class="button" onclick="videoStop();" onmouseover="hover.play();"></a>
+							<div id="video-list-container" style="overflow-y: scroll;">
+								<a class="videolink yellow" href="#" onmouseover="hover.play();"onclick="videoPlay('ZeAYr3CN57w')">How to Get NotDiscord [TUT]</a><br>
+								<a class="videolink yellow" href="#" onmouseover="hover.play();"onclick="videoPlay('kkP9G85KLrg')">NotDiscord - New Languages</a><br>
+								<a class="videolink red" href="#" onmouseover="hover.play();"onclick="videoPlay('--nrTsh7MGg')">Whack-A-Wump - Teaser Trailer</a><br>
+								<a class="videolink red" href="#" onmouseover="hover.play();"onclick="videoPlay('IzYJ75Vmojk')">Flappy Wumpus - Halloween Patch Trailer</a><br>
+								<a class="videolink red" href="#" onmouseover="hover.play();"onclick="videoPlay('POnldqfm3Rw')">Flappy Wumpus - Launch Trailer</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('psIIWROIvtM')">Discord Nitro</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('TZiOUel0IZ0')">Discord Engineering - Voice Improvements</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('pWg1uwwtB9o')">Discord Reactions</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('DG_qaabZeQs')">Discord Party Vlog</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('FBa6ZmkHqVE')">Discord Game Night (October)</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('WQFBzlM0pQg')">Discord User Status</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('Cj51ZfNLkQI')">Discord Custom Emotes</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('eqIMuWsDqdo')">Discord PAX West Vlog</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('rWrjwUm3Oi4')">Discord Keyboard Combos</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('tLS_Y_Vk9XY')">Discord Direct Calls + Group DM</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('T-bD62K0SuA')">Discord Recent Mentions</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('QEu4w4FAGTw')">Discord 2FA</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('PwnE2OPxiTY')">Discord Right Click</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('7xvpcXvNwJs')">How to use the Discord Overlay</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('hiuhkusxLJQ')">Discord Overlay</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('HhrwPMtv8p4')">Discord PTB Zone</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('sm2S6eFymoI')">Discord Notifications Update</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('03_aHK7m6vU')">Discord Role Colors</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('JEojRvFq0f8')">Discord Digs - Ep. 37</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('sSPIMgtcQnU')">Discord - Don't Be a Broom</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('8kYdRlJb5-4')">Discord Compact Mode</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('hTp39-Wwm4M')">Discord Twitch Intergration</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('50qYI4YvlAk')">How to use Discord Roles</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('9b-CWmwGUKw')">Discord Developer Vlog (Aug 17, 2015)</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('XAWgeLF9EVQ')">Discord Message Editing</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('h7tvNC-D-04')">Discord Stop Motion Moogle Banaza</a><br>
+								<a class="videolink blue" href="#" onmouseover="hover.play();"onclick="videoPlay('kzKYzdTs6jo')">Discord Keybinds</a><br>
+			</div>
+	</div>
+</div>
+</body>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script src="bg.js"></script>
+<audio id="bgm" src="snd/bgm.mp3" loop=1 auto autoplay oncanplay="audioFade()"></audio>
+</html>

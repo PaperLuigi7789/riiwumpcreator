@@ -1,0 +1,200 @@
+@font-face {
+	font-family: 'Uni Sans';
+	src: url(fnt/unisans-heavy.otf);
+	font-weight: bold;
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Wii';
+	src: url(fnt/wiifont.ttf);
+	font-weight: 600;
+}
+* {
+	margin: 0;
+	cursor: url('img/wii-cursor.png'), default;
+	padding: 0;
+}
+body {
+	color: #112;
+	text-decoration: none;
+	font-family: 'Uni Sans';
+	font-weight: 300;
+	font-size: 25pt;
+	cursor: url('img/wii-cursor.png'), default;
+	overflow: hidden;
+}
+a {
+	color: #112;
+	text-decoration: none;
+	cursor: url('img/wii-cursor.png'), default;
+}
+
+@keyframes hover {
+    0% {transform: scale(0.9);}
+	100% {transform: scale(1.0);}
+}
+
+canvas {
+    width:100%;
+    height:100%;
+    z-index: -1;
+    top:0;
+    left:0;
+    position: absolute;
+	background: linear-gradient(#eef 10%, #dde 70%, #eef 90%);
+	cursor: url('img/wii-cursor.png'), default;
+}
+
+
+#video-list {
+    transition: 0.2s;
+	margin: 2% auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 5%; right: 0;
+	width: 55%;
+	height: 75%;
+	border-radius: 25px;
+	background-color: rgba(150, 150, 180, 0.5);
+}
+
+#iframe {
+	transition: 0.2s;
+	margin: 0 auto;
+	position: absolute;
+	top: 12.5%; left: 0; bottom: 0; right: 0;
+	width: 87%;
+	height: 74.8%;
+	background-color: rgba(150, 150, 180, 0.5);
+	display:none;
+	border-radius: 10px;
+	border:8px solid #12191a;
+}
+
+#video-list-container {
+    transition: 0.2s;
+	margin: auto;
+	position: absolute;
+	top: 10%; left: 0; bottom: 8%; right: 0;
+	width: 95%;
+	height: 80%;
+}
+
+#video-list-header {
+	text-align: center;
+    transition: 0.2s;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 90%; right: 0;
+	width: 100%;
+	height: 10%;
+	border-radius: 45px;
+	background-color: rgba(114,137,218, 0.8);
+}
+
+.videolink {
+    background: transparent url(img/nothing.png) center left no-repeat;
+	background-color: rgba(0,0,0,0);
+	transition: 0.2s;
+	padding-right: 1%;
+}
+
+.videolink:hover {
+	border-radius: 15px;
+	color: #fff;
+	padding-left: 50px;
+    background: transparent url(img/video.png) center left no-repeat;
+	background-color: rgba(18, 18, 18, 0.4);
+	background-position:5px 0%;
+}
+
+.blue:hover {
+	background: transparent url(img/discord.png) center left no-repeat;
+	background-color: rgba(18, 18, 210, 0.4);
+	background-position:5px 0%;
+}
+
+.wii:hover { background: transparent url(img/wii.png) center left no-repeat; 	background-color: rgba(52, 203, 255, 0.4);	background-position:5px 0%;}
+.ds:hover { background: transparent url(img/ds.png) center left no-repeat; 	background-color: rgba(255, 8, 52, 0.4); 	background-position:5px 0%;}
+
+.red:hover {
+    background: transparent url(img/wumpus.png) center left no-repeat;
+	background-color: rgba(248, 8, 8, 0.4);
+	background-position:5px 0%;
+}
+
+.yellow:hover {
+    background: transparent url(img/notdiscord.png) center left no-repeat;
+	background-color: rgba(241,218,37, 0.4);
+	background-position:5px 0%;
+}
+
+.button {
+	width: 64px;
+	height: 64px;
+	color: #FFF;
+	border: none;
+	background-image:    url(img/back.png);
+	background-size:     100% 100%;
+	background-repeat:   no-repeat;
+	background-position: center center;  
+    outline-width: 0;
+    transition: 0.4s;
+    bottom: 0;
+	left: 0;
+	margin: 4px auto;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100%;
+	position: absolute;
+	transform: scale(0.9);
+	display: none;
+}
+
+.button:hover {
+	transform: scale(1);
+}
+
+.exit {
+	width: 128px;
+	height: 128px;
+	background-image:    url(img/exit.png);
+	display: inline-block;
+}
+
+.exit:hover {
+	transform: scale(1);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 6px;
+}
+::-webkit-scrollbar-button {
+  width: 100px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6d9aed;
+  border: 0px none #bfbfd7;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6d9aed;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #6d9aed;
+}
+::-webkit-scrollbar-track {
+  background: none;
+  border: none;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: none;
+}
+::-webkit-scrollbar-track:active {
+  background: none;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
