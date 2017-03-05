@@ -16,7 +16,7 @@
 	overflow: hidden;
 }
 body {
-background: linear-gradient(135deg, #b2bfd8 0%,#dee1e2 50%,#b2bfd8 100%);
+	background: linear-gradient(135deg, #b2bfd8 0%,#dee1e2 50%,#b2bfd8 100%);
     background-size:     100% 100%;
     background-repeat:   no-repeat;
     background-position: center;  
@@ -32,6 +32,12 @@ a {
 	text-decoration: none;
 	cursor: url('img/wii-cursor.png'), default;
 }
+canvas {
+	width: 22%;
+	height: 22%;
+}
+
+html {height: 100%;}
 
 #savebutton,#resetbutton {
 	font-family: 'Uni Sans';
@@ -51,8 +57,8 @@ a {
 
 #interface {
 	margin: 1%;
-	width: 72.5%;
-	height: 80%;
+	width: 75%;
+	height: 100%;
 	display: inline-block;
 	background: rgba(217,236,237,0.3);
 	border-radius: 10px;
